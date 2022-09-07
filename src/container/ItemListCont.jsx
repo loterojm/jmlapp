@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ItemCount from "../components/ItemCount";
+import Item from "../components/Item";
 
 const ItemList = ({ textodebusqueda }) => {
     const [carrito, setCarrito] = useState([])
@@ -27,7 +27,7 @@ const ItemList = ({ textodebusqueda }) => {
                     <div>
                         <img src={producto.thumbnail} />
                         <h6>{producto.title}</h6>
-                        <ItemCount stock={5} initial={1} key={producto.id} />
+                        <Item stock={5} initial={1} key={producto.id} />
                     </div>
                 )
             })}
