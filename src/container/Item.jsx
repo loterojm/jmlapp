@@ -1,12 +1,11 @@
-import ItemCount from "../components/Item";
+import ItemCount from "../components/ItemCount";
 
 const Item = ({ id }) => {
     const addToCart = (id) => {
-
     }
     return (
         <div>
-            {id}
+            Detalle de producto
         </div>
     )
 }

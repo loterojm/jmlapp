@@ -1,13 +1,11 @@
-import Navbar from './components/Navbar';
-import ItemListCont from './container/ItemListCont';
+import Router from './components/Router';
 
 
 function App() {
   return (
     <div>
-      <Navbar/>
-      <ItemListCont/>
-          </div>
+      <Router/>
+    </div>
   );
 }
 export default App;
