@@ -1,13 +1,30 @@
-import React from "react";
-import { createContext } from "react";
+import React , {createContext, useState} from "react";
+
+
 
 export const CartContext = createContext([])
 
-const useContext = () =>{
-    return (
-        <div>
+export const CartProvider = ({ children }) => {
+    const [items, setItems] = useState ([{
+        id: 1,
+        title: "titulo del celular",
+        qty: 2
+    }])
 
-        </div>
+    const isInCart = (id) =>{
+
+    }
+    const addItem = (id , item, qty) => {
+   
+        setItems ([...items, { ...item, qty: qty }]);
+    }
+
+    return (
+     
+            <CartContext.Provider value={{ items, addItem}}>
+                { children }
+            </CartContext.Provider>    
+      
     )
 }
-export default useContext;
+
